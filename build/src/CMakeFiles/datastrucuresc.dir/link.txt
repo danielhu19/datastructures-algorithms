@@ -1,0 +1,2 @@
+/usr/bin/llvm-ar qc libdatastrucuresc.a CMakeFiles/datastrucuresc.dir/list/sqlist.c.o
+/usr/bin/llvm-ranlib libdatastrucuresc.a

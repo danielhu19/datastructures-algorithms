@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/danielhu/OneDrive/DataStructures-C/build/CMakeFiles /home/danielhu/OneDrive/DataStructures-C/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/danielhu/OneDrive/DataStructures-C/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/danielhu/OneDrive/DataStructures-C/build/CMakeFiles /home/danielhu/OneDrive/DataStructures-C/build/apps//CMakeFiles/progress.marks
+	cd /home/danielhu/OneDrive/DataStructures-C/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 apps/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/danielhu/OneDrive/DataStructures-C/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/danielhu/OneDrive/DataStructures-C/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 apps/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,44 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/danielhu/OneDrive/DataStructures-C/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 apps/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/danielhu/OneDrive/DataStructures-C/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 apps/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/danielhu/OneDrive/DataStructures-C/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named datastrucuresc
+# Convenience name for target.
+apps/CMakeFiles/app.dir/rule:
+	cd /home/danielhu/OneDrive/DataStructures-C/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 apps/CMakeFiles/app.dir/rule
+.PHONY : apps/CMakeFiles/app.dir/rule
 
-# Build rule for target.
-datastrucuresc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 datastrucuresc
-.PHONY : datastrucuresc
-
-# fast build rule for target.
-datastrucuresc/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/datastrucuresc.dir/build.make src/CMakeFiles/datastrucuresc.dir/build
-.PHONY : datastrucuresc/fast
-
-#=============================================================================
-# Target rules for targets named app
-
-# Build rule for target.
-app: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app
+# Convenience name for target.
+app: apps/CMakeFiles/app.dir/rule
 .PHONY : app
 
 # fast build rule for target.
 app/fast:
-	$(MAKE) $(MAKESILENT) -f apps/CMakeFiles/app.dir/build.make apps/CMakeFiles/app.dir/build
+	cd /home/danielhu/OneDrive/DataStructures-C/build && $(MAKE) $(MAKESILENT) -f apps/CMakeFiles/app.dir/build.make apps/CMakeFiles/app.dir/build
 .PHONY : app/fast
+
+main.o: main.c.o
+.PHONY : main.o
+
+# target to build an object file
+main.c.o:
+	cd /home/danielhu/OneDrive/DataStructures-C/build && $(MAKE) $(MAKESILENT) -f apps/CMakeFiles/app.dir/build.make apps/CMakeFiles/app.dir/main.c.o
+.PHONY : main.c.o
+
+main.i: main.c.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.c.i:
+	cd /home/danielhu/OneDrive/DataStructures-C/build && $(MAKE) $(MAKESILENT) -f apps/CMakeFiles/app.dir/build.make apps/CMakeFiles/app.dir/main.c.i
+.PHONY : main.c.i
+
+main.s: main.c.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.c.s:
+	cd /home/danielhu/OneDrive/DataStructures-C/build && $(MAKE) $(MAKESILENT) -f apps/CMakeFiles/app.dir/build.make apps/CMakeFiles/app.dir/main.c.s
+.PHONY : main.c.s
 
 # Help Target
 help:
@@ -151,7 +163,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... app"
-	@echo "... datastrucuresc"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
@@ -163,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/danielhu/OneDrive/DataStructures-C/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

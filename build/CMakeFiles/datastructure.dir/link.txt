@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/datastructure.dir/main.c.o -o datastructure 

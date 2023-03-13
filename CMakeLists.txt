@@ -1,7 +1,14 @@
 cmake_minimum_required(VERSION 3.22)
-project(DataStructuresC)
 
-add_subdirectory(header)
+project(DataStrucuresC
+	VERSION 0.1
+	DESCRIPTION "Implement data structures and basic algorithms in C with CMake"
+	LANGUAGES C
+)
 
-add_executable(datastructure main.c)
-target_link_libraries(datastructure head)
+add_subdirectory(src)
+add_subdirectory(apps)
+# include_directories(apps)
+
+
+

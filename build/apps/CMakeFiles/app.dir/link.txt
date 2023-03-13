@@ -1,0 +1,1 @@
+/usr/bin/clang CMakeFiles/app.dir/main.c.o -o app  ../src/libdatastrucuresc.a 
