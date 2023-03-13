@@ -7,9 +7,9 @@
 #include <time.h>
 #include <unistd.h>
 
-#define ElemType int
-#define INIT 100
 #define STATUS int
+#define SUCCESS 0 
+#define FAILURE 1 
 
 // https://stackoverflow.com/questions/26053959/what-does-va-args-in-a-macro-mean
 #define _LOG(...)        \
@@ -19,7 +19,7 @@
 
 // https://stackoverflow.com/questions/3585846/color-text-in-terminal-applications-in-unix
 #define LOG(format, ...)                                                       \
-  _Log("\33[1;34m[%s,%d,%s] " format "\33[0m\n", __FILE__, __LINE__, __func__, \
+  _LOG("\33[1;34m[%s,%d,%s] " format "\33[0m\n", __FILE__, __LINE__, __func__, \
        ##__VA_ARGS__)
 
 #define Assert(cond, ...)           \

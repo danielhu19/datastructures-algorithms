@@ -69,8 +69,12 @@ apps/CMakeFiles/app.dir/main.c.o: ../apps/main.c \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  ../include/list/sqlist.h \
+  ../include/forehead/include.h
 
+
+../include/list/sqlist.h:
 
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 

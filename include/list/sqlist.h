@@ -1,7 +1,10 @@
 #ifndef SQLIST_H_
 #define SQLIST_H_
 
-#include "include.h"
+#define ElemType int
+#define INIT 100
+
+#include "../forehead/include.h"
 /* static allocation */
 // #define MAX 50
 // typedef struct{
@@ -17,11 +20,14 @@ typedef struct {
 } SqList;
 
 /* basic operations */
-SqList* SqListInit();
-STATUS SqListCreate(int num);
-STATUS SqListInsert(SqList* s, int ith, ElemType e);
-STATUS SqLisDelete(SqList* s, int ith, ElemType* e);
-STATUS SqListSearch(SqList* s, int ith, ElemType* e);
-STATUS SqListLocate(SqList* s, int* ith, ElemType e);
+void PrintSqList(SqList* sl);
+STATUS SqListInit(SqList* sl);
+STATUS SqListCreate(SqList* sl, int num);
+STATUS SqListInsert(SqList* sl, int ith, ElemType e);
+STATUS SqLisDelete(SqList* sl, int ith, ElemType* e);
+STATUS SqListLocate(SqList* sl, int* ith, ElemType e,
+                    STATUS (*compare)(ElemType, ElemType));
+STATUS SqListSearch(SqList* sl, int ith, ElemType* e);
+STATUS compare(ElemType x, ElemType y);
 
 #endif

@@ -1,6 +1,7 @@
 src/CMakeFiles/datastrucuresc.dir/list/sqlist.c.o: \
   /home/danielhu/OneDrive/DataStructures-C/src/list/sqlist.c \
-  /home/danielhu/OneDrive/DataStructures-C/src/../include/forehead/include.h \
+  /home/danielhu/OneDrive/DataStructures-C/src/../include/list/sqlist.h \
+  /home/danielhu/OneDrive/DataStructures-C/src/../include/list/../forehead/include.h \
   /usr/include/assert.h /usr/include/features.h \
   /usr/include/features-time64.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
