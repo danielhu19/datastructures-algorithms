@@ -5,10 +5,8 @@ project(DataStrucuresC
 	DESCRIPTION "Implement data structures and basic algorithms in C with CMake"
 	LANGUAGES C
 )
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_subdirectory(src)
 add_subdirectory(apps)
-# include_directories(apps)
-
-
-
+add_subdirectory(tests)

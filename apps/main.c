@@ -1,9 +1,8 @@
-#include <forehead/include.h>
 #include <list/sqlist.h>
 
 int main(int argc, char *argv[]) {
   int e;
-  int num[5];
+  int ith[3];
   SqList sl;
   SqListInit(&sl);
   SqListCreate(&sl, 5);
@@ -11,6 +10,7 @@ int main(int argc, char *argv[]) {
 
   printf("\n");
   SqListInsert(&sl, 1, 1);
+  SqListInsert(&sl, 3, 1);
   PrintSqList(&sl);
 
   printf("\n");
@@ -24,8 +24,12 @@ int main(int argc, char *argv[]) {
   PrintSqList(&sl);
 
   printf("\n");
-  SqListLocate(&sl, &e, 999, compare);
-  PrintSqList(&sl);
+  SqListLocate(&sl, ith, 1, compare);
+  int num = sizeof(ith) / sizeof(ith[0]);
+  for (int i = 0; i < num - 1; i++) {
+    printf("%d ", ith[i]);
+  }
+  printf("\n");
 
   return 0;
 }

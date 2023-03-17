@@ -4,7 +4,7 @@
 #define ElemType int
 #define INIT 100
 
-#include "../forehead/include.h"
+#include "forehead/include.h"
 /* static allocation */
 // #define MAX 50
 // typedef struct{

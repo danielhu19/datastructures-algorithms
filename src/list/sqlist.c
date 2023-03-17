@@ -78,16 +78,16 @@ STATUS SqListLocate(SqList* sl, int* ith, ElemType e,
                     STATUS (*compare)(ElemType, ElemType)) {
   Assert(sl, "NOT INIT");
   int j = 0;
-  int flag = 0;
+  bool flag = false;
   for (int i = 0; i < sl->length; i++) {
     if (compare(sl->data[i], e)) {
-      flag = 1;
-      ith[j] = i;
+      flag = true;
+      ith[j] = i + 1;
       j++;
     }
   }
   if (!flag) {
-    LOG("NOT FOUND!");
+    _LOG("NOT FOUND!");
   }
 
   return SUCCESS;
