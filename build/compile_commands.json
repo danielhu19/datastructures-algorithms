@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/danielhu/OneDrive/DataStructures-C/build",
+  "command": "/usr/bin/clang -I/home/danielhu/OneDrive/DataStructures-C/src/../include -g -o src/CMakeFiles/datastrucuresc.dir/list/sqlist.c.o -c /home/danielhu/OneDrive/DataStructures-C/src/list/sqlist.c",
+  "file": "/home/danielhu/OneDrive/DataStructures-C/src/list/sqlist.c"
+},
+{
+  "directory": "/home/danielhu/OneDrive/DataStructures-C/build",
+  "command": "/usr/bin/clang -I/home/danielhu/OneDrive/DataStructures-C/src/../include -g -o src/CMakeFiles/datastrucuresc.dir/list/linklist.c.o -c /home/danielhu/OneDrive/DataStructures-C/src/list/linklist.c",
+  "file": "/home/danielhu/OneDrive/DataStructures-C/src/list/linklist.c"
+},
+{
+  "directory": "/home/danielhu/OneDrive/DataStructures-C/build",
+  "command": "/usr/bin/clang -I/home/danielhu/OneDrive/DataStructures-C/src/../include -g -o apps/CMakeFiles/app.dir/main.c.o -c /home/danielhu/OneDrive/DataStructures-C/apps/main.c",
+  "file": "/home/danielhu/OneDrive/DataStructures-C/apps/main.c"
+},
+{
+  "directory": "/home/danielhu/OneDrive/DataStructures-C/build",
+  "command": "/usr/bin/clang -I/home/danielhu/OneDrive/DataStructures-C/src/../include -g -o tests/CMakeFiles/test.dir/test.c.o -c /home/danielhu/OneDrive/DataStructures-C/tests/test.c",
+  "file": "/home/danielhu/OneDrive/DataStructures-C/tests/test.c"
+}
+]

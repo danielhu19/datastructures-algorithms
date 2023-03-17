@@ -6,3 +6,6 @@
 /home/danielhu/OneDrive/DataStructures-C/build/apps/CMakeFiles/app.dir
 /home/danielhu/OneDrive/DataStructures-C/build/apps/CMakeFiles/edit_cache.dir
 /home/danielhu/OneDrive/DataStructures-C/build/apps/CMakeFiles/rebuild_cache.dir
+/home/danielhu/OneDrive/DataStructures-C/build/tests/CMakeFiles/test.dir
+/home/danielhu/OneDrive/DataStructures-C/build/tests/CMakeFiles/edit_cache.dir
+/home/danielhu/OneDrive/DataStructures-C/build/tests/CMakeFiles/rebuild_cache.dir

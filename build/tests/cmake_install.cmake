@@ -1,4 +1,4 @@
-# Install script for directory: /home/danielhu/OneDrive/DataStructures-C/apps
+# Install script for directory: /home/danielhu/OneDrive/DataStructures-C/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
