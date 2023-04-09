@@ -28,8 +28,6 @@ typedef struct DNode {
   ElemType data;
   struct DNode *prior, *next;
 } DNode, *DLinkList;
-STATUS DLinkListInsert(DLinkList *dl);
-STATUS DLinkListDelete(DLinkList *dl);
 
 // static linked list
 typedef struct SNode {

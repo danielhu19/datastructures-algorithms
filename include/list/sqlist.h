@@ -4,7 +4,8 @@
 #define ElemType int
 #define INIT 100
 
-#include "forehead/include.h"
+#include <forehead/include.h>
+
 /* static allocation */
 // #define MAX 50
 // typedef struct{
@@ -29,5 +30,8 @@ STATUS SqListLocate(SqList* sl, int* ith, ElemType e,
                     STATUS (*compare)(ElemType, ElemType));
 STATUS SqListSearch(SqList* sl, int ith, ElemType* e);
 STATUS compare(ElemType x, ElemType y);
+
+/* application of SqList */
+SqList* SqMergeList(SqList* sla, SqList* slb, SqList* new);
 
 #endif

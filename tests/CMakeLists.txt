@@ -1,3 +1,7 @@
-add_executable(test test.c)
+add_executable(sqlist sqlist_test.c)
+add_executable(linklist linklist_test.c)
+add_executable(sqstack sqstack_test.c)
 
-target_link_libraries(test PUBLIC datastrucuresc)
+target_link_libraries(sqlist PUBLIC datastrucuresc)
+target_link_libraries(linklist PUBLIC datastrucuresc)
+target_link_libraries(sqstack PUBLIC datastrucuresc)

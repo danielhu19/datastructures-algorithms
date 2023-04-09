@@ -8,11 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/danielhu/OneDrive/DataStructures-C/src/list/sqlist.c" "src/CMakeFiles/datastrucuresc.dir/list/sqlist.c.o" "gcc" "src/CMakeFiles/datastrucuresc.dir/list/sqlist.c.o.d"
+  "/Users/danielhu/Code/DataStructures-C/src/list/linklist.c" "src/CMakeFiles/datastrucuresc.dir/list/linklist.c.o" "gcc" "src/CMakeFiles/datastrucuresc.dir/list/linklist.c.o.d"
+  "/Users/danielhu/Code/DataStructures-C/src/list/sqlist.c" "src/CMakeFiles/datastrucuresc.dir/list/sqlist.c.o" "gcc" "src/CMakeFiles/datastrucuresc.dir/list/sqlist.c.o.d"
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

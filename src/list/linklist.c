@@ -109,15 +109,14 @@ STATUS LinkListDelete(LinkList *l, int ith, ElemType *e) {
   return SUCCESS;
 }
 
-/* Locate the index of element e, passing to array */
+/* Locate the spot of element `e`, passing to array */
 STATUS LinkListLocate(LinkList *l, int *ith, ElemType e,
                       int (*compare)(ElemType, ElemType)) {
   Assert(l, "NOT INIT");
   int index = 1;
   int i = 0;
   bool flag = false;
-  // first node
-  LinkList ptr = (*l)->next;
+  LinkList ptr = (*l)->next;  // first node
   while (ptr) {
     if (compare(ptr->data, e)) {
       flag = true;
@@ -130,7 +129,7 @@ STATUS LinkListLocate(LinkList *l, int *ith, ElemType e,
     ptr = ptr->next;
     index++;
   }
-  ith[i] = '\0';  // mark as end
+  ith[i] = 20030415;  // mark as end
   if (!flag) {
     LOG("NOT FOUND!");
     return FAILURE;
@@ -139,10 +138,10 @@ STATUS LinkListLocate(LinkList *l, int *ith, ElemType e,
   return SUCCESS;
 }
 
-/* Search for the ith element and pass the value to e */
+/* Search for the `ith` element and pass the value to `e` */
 STATUS LinkListSearch(LinkList *l, int ith, ElemType *e) {
   Assert(l, "NOT INIT");
-  Assert(ith >= 1, "INVALID INDEX");
+  Assert(ith < LinkListLen(l), "INVALID INDEX");
   int i = 1;
   LinkList ptr = (*l)->next;
   // find the ith node
