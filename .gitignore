@@ -40,8 +40,6 @@
 **/CMakeScripts
 **/compile_commands.json
 
-include/divisible/*
-
 
 ## Local 
 
