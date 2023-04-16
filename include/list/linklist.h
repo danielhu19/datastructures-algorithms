@@ -2,8 +2,7 @@
 #define LINKLIST_H_
 #include <forehead/include.h>
 
-#define ElemType int
-#define MAXSIZE 100
+#define LISTMAXSIZE 10
 
 // single linked list
 typedef struct LNode {
@@ -33,6 +32,6 @@ typedef struct DNode {
 typedef struct SNode {
   ElemType data;
   int next;
-} SLinkList[MAXSIZE];
+} SLinkList[LISTMAXSIZE];
 
 #endif

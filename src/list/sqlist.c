@@ -19,10 +19,10 @@ void PrintSqList(SqList* sl) {
 
 /* Create a null SqList */
 STATUS SqListInit(SqList* sl) {
-  (*sl).data = (ElemType*)malloc(INIT * sizeof(ElemType));
+  (*sl).data = (ElemType*)malloc(LISTINIT * sizeof(ElemType));
   Assert((sl)->data, "MALLOC FAILED!");
   (*sl).length = 0;
-  (*sl).size = INIT;
+  (*sl).size = LISTINIT;
 
   return SUCCESS;
 }
@@ -49,7 +49,7 @@ STATUS SqListInsert(SqList* sl, int ith, ElemType e) {
   Assert(ith >= 1 && ith <= (*sl).length + 1, "INVALID INSERTION REQUEST");
   /* re-allocate space if SqList is full */
   if ((*sl).length == (*sl).size) {
-    sl->data = realloc((*sl).data, ((*sl).size + INIT) * sizeof(ElemType));
+    sl->data = realloc((*sl).data, ((*sl).size + LISTINIT) * sizeof(ElemType));
     Assert(sl->data, "RE-ALLOCATION FAILED");
   }
 

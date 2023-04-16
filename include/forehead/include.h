@@ -2,15 +2,16 @@
 #define INCLUDE_H_
 
 #include <assert.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <unistd.h>
-#include <stdbool.h>
 
 #define STATUS int
-#define SUCCESS 0 
-#define FAILURE 1 
+#define SUCCESS 0
+#define FAILURE 1
+#define ElemType int
 
 // https://stackoverflow.com/questions/26053959/what-does-va-args-in-a-macro-mean
 #define _LOG(...)        \

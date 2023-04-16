@@ -3,8 +3,6 @@
 
 #include <forehead/include.h>
 
-#define ElemType int
-
 #define STACK_INIT_SIZE 10
 #define STACK_INCRE_SIZE 10
 

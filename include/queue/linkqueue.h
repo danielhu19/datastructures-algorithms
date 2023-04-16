@@ -3,8 +3,6 @@
 
 #include <forehead/include.h>
 
-#define ElemType int
-
 typedef struct QNode {
   ElemType data;
   struct QNode *next;

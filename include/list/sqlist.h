@@ -1,8 +1,7 @@
 #ifndef SQLIST_H_
 #define SQLIST_H_
 
-#define ElemType int
-#define INIT 100
+#define LISTINIT 100
 
 #include <forehead/include.h>
 
