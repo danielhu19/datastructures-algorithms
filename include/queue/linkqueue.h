@@ -17,7 +17,7 @@ STATUS InitQueue(LinkQNode *Q);
 STATUS DestroyQueue(LinkQNode *Q);
 STATUS ClearQueue(LinkQNode *Q);
 STATUS QueueEmpty(LinkQNode *Q);
-ElemType QueueLength(LinkQNode *Q);
+int QueueLength(LinkQNode *Q);
 STATUS HeadQueue(LinkQNode *Q, ElemType *e);
 STATUS EnQueue(LinkQNode *Q, ElemType e);
 STATUS DeQueue(LinkQNode *Q, ElemType *e);

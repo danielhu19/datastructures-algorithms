@@ -50,7 +50,7 @@ STATUS QueueEmpty(LinkQNode *Q) {
 }
 
 /* return the length of queue */
-ElemType QueueLength(LinkQNode *Q) {
+int QueueLength(LinkQNode *Q) {
   Assert(Q->front, "NOT INIT");
   if (Q->front == Q->rear) {
     LOG("NULL QUEUE!");
