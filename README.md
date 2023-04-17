@@ -1,6 +1,6 @@
 # Data Structures and Algorithms in C
 
-This repo includes the implementation C code of necessary `data structures` and some `basic algorithms` during the preparation of `graduate entrance examination`.
+This repo includes the implementation C code of necessary `Data Structures` and some `basic Algorithms` during the preparation of `Graduate Entrance Examination`.
 
 <img src="https://raw.githubusercontent.com/danielhu19/mypicgocloud/master/img/202304172032097.jpeg" width="50%" height="50%">
 
