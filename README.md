@@ -2,14 +2,12 @@
 
 This repo includes the implementation C code of necessary `data structures` and some `basic algorithms` during the preparation of `graduate entrance examination`.
 
-
-
-<img src="https://raw.githubusercontent.com/danielhu19/mypicgocloud/master/img/202304172032097.jpeg" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/danielhu19/mypicgocloud/master/img/202304172032097.jpeg" width="50%" height="50%">
 
 ## Welcome to Contribute
 
-Firstly, due to the tight schedule, there may be some errors or deficiencies in the code, so if you find any, ***please feel free to submit an issue***.
-Secondly, ***everyone is welcome to submit a pull request***, contribute your own code, and make progress together!
+Firstly, due to the tight schedule, there may be some errors or deficiencies in the code, so if you find any, **_please feel free to submit an issue_**.
+Secondly, **_everyone is welcome to submit a pull request_**, contribute your own code, and make progress together!
 
 ## Requires
 
@@ -37,7 +35,7 @@ cd DataStructures-C
 
 ### Compile and Run
 
-> I strongly recommended using VSCode (trust me, I used to be a huge fan of vim and terminal) with `CMake` and `CMake Tools` extension to build. 
+> I strongly recommended using VSCode (trust me, I used to be a huge fan of vim and terminal) with `CMake` and `CMake Tools` extension to build.
 
 #### For VSCode user:
 
@@ -58,15 +56,12 @@ cmake --build build
 ./build/tests/$EXE // choose one
 ```
 
-
-
 Here I put the commands in vscode cmake in case you got some problems:
 
 ```shell
-[main] Building folder: DataStructures-C 
-[main] Configuring project: DataStructures-C 
+[main] Building folder: DataStructures-C
+[main] Configuring project: DataStructures-C
 [proc] Executing command: /opt/homebrew/bin/cmake --no-warn-unused-cli -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_C_COMPILER:FILEPATH=/opt/homebrew/opt/llvm/bin/clang -DCMAKE_CXX_COMPILER:FILEPATH=/opt/homebrew/opt/llvm/bin/clang++ -S/Users/danielhu/Code/danielhu19/DataStructures-C -B/Users/danielhu/Code/danielhu19/DataStructures-C/build -G Ninja
 [proc] Executing command: /opt/homebrew/bin/cmake --build /Users/danielhu/Code/danielhu19/DataStructures-C/build --config Debug --target all --
 cd ./build/tests
 ```
-
