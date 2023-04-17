@@ -20,11 +20,11 @@ Secondly, **_everyone is welcome to submit a pull request_**, contribute your ow
 ## Tested on
 
 - MacOS Ventura 13.0
+- Linux: tested on docker Ubuntu:22.04
 
-> Linux: Not tested yet, theoretically can be run on Linux.
-> Windows: Use Windows Subsystem for Linux
+> Windows: Not tested yet, theoretically can be run on Linux.
 
-## Build
+## Local Build
 
 ### Get source code
 
@@ -59,9 +59,19 @@ cmake --build build
 Here I put the commands in vscode cmake in case you got some problems:
 
 ```shell
-[main] Building folder: DataStructures-C
-[main] Configuring project: DataStructures-C
 [proc] Executing command: /opt/homebrew/bin/cmake --no-warn-unused-cli -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_C_COMPILER:FILEPATH=/opt/homebrew/opt/llvm/bin/clang -DCMAKE_CXX_COMPILER:FILEPATH=/opt/homebrew/opt/llvm/bin/clang++ -S/Users/danielhu/Code/danielhu19/DataStructures-C -B/Users/danielhu/Code/danielhu19/DataStructures-C/build -G Ninja
 [proc] Executing command: /opt/homebrew/bin/cmake --build /Users/danielhu/Code/danielhu19/DataStructures-C/build --config Debug --target all --
 cd ./build/tests
+```
+
+# Docker Support
+
+> I'm not so familiar with docker actually, just on the way learning.
+
+You can use Docker if you don't want to deal with setting up the environment.
+Here is an example:
+
+```shell
+docker build -t datastructures:queue . # tag name: whatever you like
+docker run -it --rm datastrucures:queue /bin/bash -c "cd /app;./build/tests/sqlist"
 ```
