@@ -3,7 +3,7 @@
 This repo includes the implementation C code of basic `Data Structures` and essential `Must-learn Algorithms` during the preparation of `Graduate Entrance Examination`.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/danielhu19/mypicgocloud/master/img/202304172032097.jpeg" width="50%" height="50%">
+<img src="https://raw.githubusercontent.com/danielhu19/mypicgocloud/master/img/202304172032097.jpeg" width="40%" height="40%">
 </p>
 
 ## Welcome to Contribute
@@ -12,7 +12,7 @@ Due to the tight schedule, there may be some deficiencies or errors in the code,
 
 Also, **_Everyone is welcome to submit a pull request_**, contribute your own code, and make progress together!
 
-## Requires
+## Requirement
 
 - cmake
 - make
@@ -82,8 +82,8 @@ docker run -it --rm datastructures:queue /bin/bash -c "cd /app;./build/tests/sql
 
 # Recommended Repos
 
-- chatgpt in terminal: https://github.com/nitefood/ai-bash-gpt
-- fuck chaoxing: https://github.com/cxOrz/chaoxing-sign-cli
-- for algorithms: https://github.com/labuladong/fucking-algorithm
-- dsa in c++: https://github.com/TheAlgorithms/C-Plus-Plus/tree/master/data_structures
-- dsa in c: https://github.com/TheAlgorithms/C/tree/master/data_structures
+- ChatGpt in terminal: https://github.com/nitefood/ai-bash-gpt
+- Fuck chaoxing: https://github.com/cxOrz/chaoxing-sign-cli
+- For algorithms: https://github.com/labuladong/fucking-algorithm
+- Algorithms in c++: https://github.com/TheAlgorithms/C-Plus-Plus/tree/master/data_structures
+- Algorithms in c: https://github.com/TheAlgorithms/C/tree/master/data_structures
