@@ -1,8 +1,10 @@
-# Data Structures and Algorithms in C/C++
+# Data Structures and Algorithms in C and C++
 
-This repo includes the implementation C code of basic `Data Structures` and some `Must-learn Algorithms` during the preparation of `Graduate Entrance Examination`.
+This repo includes the implementation C code of basic `Data Structures` and essential `Must-learn Algorithms` during the preparation of `Graduate Entrance Examination`.
 
+<p align="center">
 <img src="https://raw.githubusercontent.com/danielhu19/mypicgocloud/master/img/202304172032097.jpeg" width="50%" height="50%">
+</p>
 
 ## Welcome to Contribute
 
@@ -30,8 +32,8 @@ Also, **_Everyone is welcome to submit a pull request_**, contribute your own co
 ### Get source code
 
 ```shell
-git clone https://github.com/danielhu19/DataStructures-C.git
-cd DataStructures-C
+git clone https://github.com/danielhu19/datastructures-algorithms.git
+cd datastructures-algorithms
 ```
 
 ### Compile and Run
