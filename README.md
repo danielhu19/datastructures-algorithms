@@ -67,7 +67,7 @@ Here I put the commands in vscode cmake in case you got some problems:
 cd ./build/tests
 ```
 
-# Docker Support
+## Docker Support
 
 > I'm not so familiar with docker actually, just on the way of learning.
 
@@ -80,7 +80,7 @@ docker build -t datastructures:queue .
 docker run -it --rm datastructures:queue /bin/bash -c "cd /app;./build/tests/sqlist"
 ```
 
-# Recommended Repos
+## Recommended Repos
 
 - ChatGpt in terminal: https://github.com/nitefood/ai-bash-gpt
 - Fuck chaoxing: https://github.com/cxOrz/chaoxing-sign-cli
