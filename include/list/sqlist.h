@@ -2,6 +2,7 @@
 #define SQLIST_H_
 
 #define LISTINIT 100
+#define ElemType int
 
 #include <forehead/include.h>
 

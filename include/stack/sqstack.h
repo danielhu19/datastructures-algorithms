@@ -3,6 +3,7 @@
 
 #include <forehead/include.h>
 
+#define ElemType char
 #define STACK_INIT_SIZE 10
 #define STACK_INCRE_SIZE 10
 
@@ -21,7 +22,7 @@ typedef struct {
 STATUS InitSqStack(SqStack* s);
 STATUS DestroySqStack(SqStack* s);
 STATUS ClearSqStack(SqStack* s);
-STATUS SqStackEmpty(SqStack* s);
+bool SqStackEmpty(SqStack* s);
 STATUS SqStackLength(SqStack* s);
 STATUS Sq_Push(SqStack* s, ElemType e);
 STATUS Sq_Pop(SqStack* s, ElemType* e);

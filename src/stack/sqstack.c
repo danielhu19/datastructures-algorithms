@@ -35,7 +35,7 @@ STATUS ClearSqStack(SqStack* s) {
 }
 
 /* check if SqStack is NULL or not */
-STATUS SqStackEmpty(SqStack* s) { return s->base == s->top; }
+bool SqStackEmpty(SqStack* s) { return s->base == s->top; }
 
 /* Get the length of SqStack */
 STATUS SqStackLength(SqStack* s) {

@@ -3,6 +3,7 @@
 #include <forehead/include.h>
 
 #define LISTMAXSIZE 10
+#define ElemType int
 
 // single linked list
 typedef struct LNode {

@@ -5,14 +5,15 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 #include <unistd.h>
 
 #define STATUS int
 #define SUCCESS 0
 #define FAILURE 1
-#define ElemType int
 
+/* Following MACRO FUNCTIONS originated from NJU-ICS:PA */
 // https://stackoverflow.com/questions/26053959/what-does-va-args-in-a-macro-mean
 #define _LOG(...)        \
   do {                   \
