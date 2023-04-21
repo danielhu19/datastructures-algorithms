@@ -1,14 +1,14 @@
-# Data Structures and Algorithms in C
+# Data Structures and Algorithms in C/C++
 
-This repo includes the implementation C code of necessary `Data Structures` and some `basic Algorithms` during the preparation of `Graduate Entrance Examination`.
+This repo includes the implementation C code of basic `Data Structures` and some `Must-learn Algorithms` during the preparation of `Graduate Entrance Examination`.
 
 <img src="https://raw.githubusercontent.com/danielhu19/mypicgocloud/master/img/202304172032097.jpeg" width="50%" height="50%">
 
 ## Welcome to Contribute
 
-Firstly, due to the tight schedule, there may be some errors or deficiencies in the code, so if you find any, **_please feel free to submit an issue_**.
+Due to the tight schedule, there may be some deficiencies or errors in the code, if you find any, **_please feel free to submit an issue_**.
 
-Secondly, **_everyone is welcome to submit a pull request_**, contribute your own code, and make progress together!
+Also, **_Everyone is welcome to submit a pull request_**, contribute your own code, and make progress together!
 
 ## Requires
 
@@ -16,12 +16,12 @@ Secondly, **_everyone is welcome to submit a pull request_**, contribute your ow
 - make
 - gcc/clang
 
-> If you encounter any problems, google it before submitting a issue.
+> If you encounter any problem, google it before submitting a issue.
 
 ## Tested on
 
 - MacOS Ventura 13.0
-- Linux: tested on docker Ubuntu:22.04
+- Linux: tested on docker Ubuntu 22.04
 
 > Windows: Not tested yet, theoretically can be run on Windows if you use proper compiler.
 
@@ -67,7 +67,7 @@ cd ./build/tests
 
 # Docker Support
 
-> I'm not so familiar with docker actually, just on the way learning.
+> I'm not so familiar with docker actually, just on the way of learning.
 
 You can use Docker if you don't want to deal with setting up the environment.
 Here is an example:
@@ -75,5 +75,13 @@ Here is an example:
 ```shell
 # tag name: whatever you like
 docker build -t datastructures:queue .
-docker run -it --rm datastrucures:queue /bin/bash -c "cd /app;./build/tests/sqlist"
+docker run -it --rm datastructures:queue /bin/bash -c "cd /app;./build/tests/sqlist"
 ```
+
+# Recommended Repos
+
+- chatgpt in terminal: https://github.com/nitefood/ai-bash-gpt
+- fuck chaoxing: https://github.com/cxOrz/chaoxing-sign-cli
+- for algorithms: https://github.com/labuladong/fucking-algorithm
+- dsa in c++: https://github.com/TheAlgorithms/C-Plus-Plus/tree/master/data_structures
+- dsa in c: https://github.com/TheAlgorithms/C/tree/master/data_structures
