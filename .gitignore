@@ -53,4 +53,3 @@ bin/*
 test/test_runner
 .cache/
 !build/.gitkeep
-tmp

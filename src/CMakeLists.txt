@@ -9,6 +9,6 @@ set(HEAD_LIST
 set(SRC_List list/sqlist.c list/linklist.c stack/sqstack.c queue/sqqueue.c
              queue/linkqueue.c)
 
-add_library(datastrucuresc ${SRC_List} ${HEAD_LIST})
+add_library(datastructures ${SRC_List} ${HEAD_LIST})
 
-target_include_directories(datastrucuresc PUBLIC ../include)
+target_include_directories(datastructures PUBLIC ../include)
