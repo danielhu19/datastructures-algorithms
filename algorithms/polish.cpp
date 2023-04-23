@@ -11,6 +11,96 @@ using std::vector;
 
 class Solution {
  public:
+  /* using two stacks to calculate the given expression */
+  int calExpr(vector<string>& tokens) {
+    stack<string> optr;
+    stack<int> opnd;
+    map<string, int> priority{{"+", 1}, {"-", 1}, {"*", 2}, {"/", 2}, {"(", 3}};
+
+    for (string token : tokens) {
+      if (is_Num(token)) {
+        opnd.push(atof(token.c_str()));
+      } else if (token == "(") {
+        optr.push(token);
+      } else if (token == ")") {
+        while (optr.top() != "(") {
+          string opt = optr.top();
+          optr.pop();
+          int num2 = opnd.top();
+          opnd.pop();
+          int num1 = opnd.top();
+          opnd.pop();
+          switch (opt[0]) {
+            case '+':
+              opnd.push(num1 + num2);
+              break;
+            case '-':
+              opnd.push(num1 - num2);
+              break;
+            case '*':
+              opnd.push(num1 * num2);
+              break;
+            case '/':
+              opnd.push(num1 / num2);
+              break;
+          }
+        }
+        optr.pop();  // pop the corresponding "(" out
+      } else {
+        /* operator: mind the parentheses */
+        while (!optr.empty() && !opnd.empty() &&
+               priority[optr.top()] >= priority[token] && optr.top() != "(") {
+          string opt = optr.top();
+          optr.pop();
+          int num2 = opnd.top();
+          opnd.pop();
+          int num1 = opnd.top();
+          opnd.pop();
+          switch (opt[0]) {
+            case '+':
+              opnd.push(num1 + num2);
+              break;
+            case '-':
+              opnd.push(num1 - num2);
+              break;
+            case '*':
+              opnd.push(num1 * num2);
+              break;
+            case '/':
+              opnd.push(num1 / num2);
+              break;
+          }
+        }
+        optr.push(token);
+      }
+    }
+
+    // scan if over but operator left
+    while (!optr.empty()) {
+      string opt = optr.top();
+      optr.pop();
+      int num2 = opnd.top();
+      opnd.pop();
+      int num1 = opnd.top();
+      opnd.pop();
+      switch (opt[0]) {
+        case '+':
+          opnd.push(num1 + num2);
+          break;
+        case '-':
+          opnd.push(num1 - num2);
+          break;
+        case '*':
+          opnd.push(num1 * num2);
+          break;
+        case '/':
+          opnd.push(num1 / num2);
+          break;
+      }
+    }
+    return opnd.top();
+  }
+
   vector<string> convertRPN(vector<string>& tokens) {
     int size = tokens.size();
     vector<string> newTokens;
@@ -36,12 +126,14 @@ class Solution {
         /* operator:
         - if stack is empty, push into stack
         - if not empty, pop all operators which priority is greater than current
+        unless encounter "("
          */
         if (optstk.empty()) {
           optstk.push(token);
           continue;
         }
-        while (!optstk.empty() && priority[optstk.top()] >= priority[token]) {
+        while (!optstk.empty() && priority[optstk.top()] >= priority[token] &&
+               !(optstk.top() == "(")) {
           newTokens.push_back(optstk.top());
           optstk.pop();
         }
@@ -129,29 +221,17 @@ class Solution {
   }
 
   bool is_Num(string& s) {
-    return !(s == "+" || s == "-" || s == "*" || s == "/");
+    return !(s == "+" || s == "-" || s == "*" || s == "/" || s == "(" ||
+             s == ")");
   }
 };
 
 int main() {
   Solution solution;
-  // vector<string> str = {"a", "+", "(", "b", "-", "c", ")",
-  //                       "*", "d", "/", "e", "+", "f"};
-
-  vector<string> str = {"-1", "+", "(", "3", "-", "2", ")",
-                        "*",  "4", "/", "4", "+", "6"};
-  str = solution.convertRPN(str);
-  for (string s : str) {
-    std::cout << s << " ";
-  }
-  std::cout << std::endl;
-  std::cout << solution.evalRPN(str) << std::endl;
-
-  // vector<string> str1{"15", "7", "1", "1", "+", "-", "/", "3",
-  //                     "*",  "2", "1", "1", "+", "+", "-"};
-  // vector<string> str2{"-", "*", "/", "15", "-", "7", "+", "1",
-  //                     "1", "3", "+", "2",  "+", "1", "1"};
-  // std::cout << solution.evalRPN(str1) << std::endl;
-  // std::cout << solution.evalPN(str2) << std::endl;
+  // vector<string> str = {"a", "+", "b", "-", "a", "*", "(", "(", "c", "+",
+  //                       "d", ")", "/", "e", "-", "f", ")", "+", "g"};
+  vector<string> str = {"2", "+", "1", "-", "1", "*",  "(", "(", "1", "+",
+                        "1", ")", "/", "2", "-", "-1", ")", "+", "1"};
+  std::cout << solution.calExpr(str) << std::endl;
   return 0;
 }
