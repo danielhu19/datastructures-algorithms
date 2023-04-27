@@ -229,3 +229,57 @@ LinkList reorderList(LinkList head) {
   head->next = NULL;
   return last;
 }
+
+// not useful for negative number
+LinkList detectDuplicate(LinkList head) {
+  int max = 0;
+  LinkList ptr = head;
+  while (ptr) {
+    if (max < ptr->data) max = ptr->data;
+    ptr = ptr->next;
+  }
+
+  LinkList prev = (LinkList)malloc(sizeof(LNode));
+  Assert(prev, "fail!");
+  prev->next = head;
+  LinkList curr = head;
+  int arr[max + 1];
+  for (int i = 0; i <= max; i++) {
+    arr[i] = 0;
+  }
+
+  if (head == NULL || head->next == NULL) return head;
+
+  while (curr) {
+    if (arr[curr->data] == 0) {
+      arr[curr->data] = 1;
+      prev = prev->next;
+      curr = curr->next;
+    } else {
+      prev->next = curr->next;
+      curr = curr->next;
+    }
+  }
+  return head;
+}
+
+int main() {
+  LinkList list1 = (LinkList)malloc(sizeof(LNode));
+  list1->data = -1;
+  LinkListInsert(&list1, 1, 3);
+  LinkListInsert(&list1, 1, 3);
+  LinkListInsert(&list1, 1, 0);
+  LinkListInsert(&list1, 1, 0);
+  LinkListInsert(&list1, 1, 0);
+  LinkListInsert(&list1, 1, 0);
+
+  detectDuplicate(list1);
+  LinkList ptr = list1;
+  while (ptr) {
+    printf("%d ", ptr->data);
+    ptr = ptr->next;
+  }
+  printf("\n");
+
+  return 0;
+}
