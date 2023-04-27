@@ -8,6 +8,9 @@ project(
   LANGUAGES C CXX)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+set(CMAKE_C_COMPILER /opt/homebrew/opt/llvm@16/bin/clang)
+set(CMAKE_CXX_COMPILER /opt/homebrew/opt/llvm@16/bin/clang++)
+
 add_subdirectory(src)
 add_subdirectory(tests)
 add_subdirectory(algorithms)
