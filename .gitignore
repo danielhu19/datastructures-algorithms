@@ -35,7 +35,7 @@
 **/install_manifest.txt
 **/CMakeFiles/
 **/CTestTestfile.cmake
-**/Makefile
+# **/Makefile
 **/*.cbp
 **/CMakeScripts
 **/compile_commands.json
