@@ -1,20 +1,9 @@
-# set(head_list
-# "${datastructures-algorithms_source_dir}/include/forehead/include.h"
-# "${datastructures-algorithms_source_dir}/include/list/sqlist.h"
-# "${datastructures-algorithms_source_dir}/include/list/linklist.h"
-# "${datastructures-algorithms_source_dir}/include/stack/sqstack.h"
-# "${datastructures-algorithms_source_dir}/include/queue/sqqueue.h"
-# "${datastructures-algorithms_source_dir}/include/queue/linkqueue.h"
-# "${datastructures-algorithms_source_dir}/include/tree/bitree.h"
-# "${datastructures-algorithms_source_dir}/include/tree/tree.h")
+# set(SRC_LIST list/sqlist.c list/linklist.c stack/sqstack.c queue/sqqueue.c
+# queue/linkqueue.c tree/bitree.c)
+file(GLOB_RECURSE SRC_LIST "${DATASTRUCTURES_ALGORITHMS_SOURCE_DIR}/src/**/*.c")
 
-set(head_list "")
-file(GLOB_RECURSE head_list
-     "${datastructures-algorithms_source_dir}/include/**/*.h")
+get_property(HEAD_LIST GLOBAL PROPERTY HEAD_LIST)
+add_library(DSA ${SRC_LIST} ${HEAD_LIST})
 
-set(SRC_List list/sqlist.c list/linklist.c stack/sqstack.c queue/sqqueue.c
-             queue/linkqueue.c tree/bitree.c)
-
-add_library(datastructures ${SRC_List} ${HEAD_LIST})
-
-target_include_directories(datastructures PUBLIC ../include)
+target_include_directories(
+  DSA PUBLIC ${DATASTRUCTURES_ALGORITHMS_SOURCE_DIR}/include)
