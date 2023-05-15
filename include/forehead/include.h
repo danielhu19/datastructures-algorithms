@@ -1,7 +1,8 @@
-#ifndef INCLUDE_H_
-#define INCLUDE_H_
+#ifndef _INCLUDE_H_
+#define _INCLUDE_H_
 
 #include <assert.h>
+#include <limits.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
