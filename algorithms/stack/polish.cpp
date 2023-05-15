@@ -190,7 +190,7 @@ class Solution {
     int size = tokens.size();
     stack<int> stk;
 
-    /* take the ekement from tail to head */
+    /* take the element from tail to head */
     for (int i = size - 1; i >= 0; i--) {
       string token = tokens[i];
       if (is_Num(token)) {
