@@ -18,7 +18,7 @@ Also, **_Everyone is welcome to submit a pull request_**, contribute your own co
 - make
 - gcc/clang
 
-> If you encounter any problem, google it before submitting a issue.
+> If you encounter any problem, google it/ask gpt before submitting a issue.
 
 ## Tested on
 
@@ -80,10 +80,7 @@ docker build -t datastructures:queue .
 docker run -it --rm datastructures:queue /bin/bash -c "cd /app;./build/tests/sqlist"
 ```
 
-## Recommended Repos
+## Recommended Resources
 
-- ChatGpt in terminal: https://github.com/nitefood/ai-bash-gpt
-- Fuck chaoxing: https://github.com/cxOrz/chaoxing-sign-cli
-- For algorithms: https://github.com/labuladong/fucking-algorithm
-- Algorithms in c++: https://github.com/TheAlgorithms/C-Plus-Plus/tree/master/data_structures
-- Algorithms in c: https://github.com/TheAlgorithms/C/tree/master/data_structures
+- https://jyywiki.cn
+- https://csdiy.wiki
