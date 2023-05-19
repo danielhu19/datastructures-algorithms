@@ -1,7 +1,7 @@
 #ifndef SQQUEUE_H_
 #define SQQUEUE_H_
 
-#include <forehead/include.h>
+#include <forehead/forehead.h>
 #define QUEUEMAXSIZE 5
 #define ElemType int
 

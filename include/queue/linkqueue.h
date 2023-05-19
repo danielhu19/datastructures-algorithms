@@ -1,7 +1,7 @@
 #ifndef LINKQUEUE_H_
 #define LINKQUEUE_H_
 
-#include <forehead/include.h>
+#include <forehead/forehead.h>
 
 #define ElemType int
 

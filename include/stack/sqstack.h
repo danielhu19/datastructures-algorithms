@@ -1,7 +1,7 @@
 #ifndef SQSTACK_H_
 #define SQSTACK_H_
 
-#include <forehead/include.h>
+#include <forehead/forehead.h>
 
 #define ElemType int
 #define STACK_INIT_SIZE 10

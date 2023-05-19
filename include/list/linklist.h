@@ -1,6 +1,6 @@
 #ifndef LINKLIST_H_
 #define LINKLIST_H_
-#include <forehead/include.h>
+#include <forehead/forehead.h>
 
 #define LISTMAXSIZE 10
 #define ElemType int

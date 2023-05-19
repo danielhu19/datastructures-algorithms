@@ -4,7 +4,7 @@
 #define LISTINIT 100
 #define ElemType int
 
-#include <forehead/include.h>
+#include <forehead/forehead.h>
 
 /* static allocation */
 // #define MAX 50

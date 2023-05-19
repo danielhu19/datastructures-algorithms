@@ -1,7 +1,7 @@
 #ifndef _BITREE_H_
 #define _BITREE_H_
 
-#include <forehead/include.h>
+#include <forehead/forehead.h>
 
 #define ElemType char
 
