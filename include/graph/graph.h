@@ -3,7 +3,7 @@
 
 #include <forehead/forehead.h>
 
-#define MAX_VERTEX_NUM 20
+#define MAX_VERTEX_NUM 10
 #define INFINITY INT_MAX
 typedef char VertexType;
 typedef int EdgeType;
@@ -15,7 +15,7 @@ typedef int infoType;
    */
 typedef enum { DG, DN, UDG, UDN } GraphKind;
 
-/* Adjacent Matrix */
+/* ---------------------Adjacent Matrix--------------------- */
 typedef struct ArcCell {
   EdgeType adj;  // weight or 0/1
   // InfoType *info;  // other information
@@ -31,16 +31,16 @@ typedef struct {
 
 STATUS createUDN(MGraph* G, int vexNum, int arcNum, int incInfo);
 
-/* Adjacent List */
-typedef struct VNode {
-  VertexType data;
-  EdgeType* first;  // first arc
-} VNode, AdjList[MAX_VERTEX_NUM];
-
+/* ---------------------Adjacent List--------------------- */
 typedef struct ArcNode {
   int adjVex;
   struct ArcNode* next;
 } ArcNode;
+
+typedef struct VNode {
+  VertexType data;
+  ArcNode* first;  // first arc
+} VNode, AdjList[MAX_VERTEX_NUM];
 
 typedef struct {
   AdjList vertices;
@@ -48,7 +48,7 @@ typedef struct {
   GraphKind kind;
 } ALGraph;
 
-/* Cross-linked List */
+/* ---------------------Cross-linked List--------------------- */
 typedef struct ArcBox {
   int tailvex, headvex;          // tail and head of arc
   struct ArcBox *hlink, *tlink;  // next arc of head and tail
@@ -67,7 +67,7 @@ typedef struct {
   int vexNum, arcNum;             // number of vertex and edge
 } OLGraph;
 
-/* Adjacency MultiList */
+/* ---------------------Adjacency MultiList--------------------- */
 typedef enum { unvisited, visited } ifVisited;
 
 typedef struct EBox {
@@ -86,5 +86,11 @@ typedef struct {
   VexBox adjmulist[MAX_VERTEX_NUM];  // vertex array
   int vexNum, arcNum;                // number of vertex and edge
 } AMLGraph;
+
+/* Search Algorithms */
+void DFSTraverse(ALGraph G);
+void DFS(ALGraph G, int v);
+void BFSTraverse(ALGraph G);
+void BFS(ALGraph G, int v);
 
 #endif
