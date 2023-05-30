@@ -92,5 +92,8 @@ void DFSTraverse(ALGraph G);
 void DFS(ALGraph G, int v);
 void BFSTraverse(ALGraph G);
 void BFS(ALGraph G, int v);
+void BFSShortestPath(ALGraph G, int v);
+int GetInDegree(ALGraph G, int v);
+void TopoLogicSort(ALGraph G);
 
 #endif
