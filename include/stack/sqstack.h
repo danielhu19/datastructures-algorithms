@@ -24,9 +24,9 @@ STATUS DestroySqStack(SqStack* s);
 STATUS ClearSqStack(SqStack* s);
 bool SqStackEmpty(SqStack* s);
 STATUS SqStackLength(SqStack* s);
-STATUS Sq_Push(SqStack* s, ElemType e);
-STATUS Sq_Pop(SqStack* s, ElemType* e);
-STATUS Sq_GetTop(SqStack* s, ElemType* e);
+STATUS SqPush(SqStack* s, ElemType e);
+STATUS SqPop(SqStack* s, ElemType* e);
+STATUS SqGetTop(SqStack* s, ElemType* e);
 void PrintSqStack(SqStack* s);
 
 #endif

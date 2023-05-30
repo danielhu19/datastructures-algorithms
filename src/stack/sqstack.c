@@ -47,7 +47,7 @@ STATUS SqStackLength(SqStack* s) {
  * Return top element to `e`
  * - FAILURE: NULL STACK
  */
-STATUS Sq_GetTop(SqStack* s, ElemType* e) {
+STATUS SqGetTop(SqStack* s, ElemType* e) {
   Assert(s->base, "STACK NOT EXIST");
   if (s->top == s->base) return FAILURE;
   *e = *(s->top - 1);
@@ -55,7 +55,7 @@ STATUS Sq_GetTop(SqStack* s, ElemType* e) {
 }
 
 /* Push element `e` into the SqStack */
-STATUS Sq_Push(SqStack* s, ElemType e) {
+STATUS SqPush(SqStack* s, ElemType e) {
   Assert(s->base, "STACK NOT EXIST");
   // increase memory space if stack is FULL
   if (s->top - s->base >= STACK_INIT_SIZE) {
@@ -74,7 +74,7 @@ STATUS Sq_Push(SqStack* s, ElemType e) {
  * Pop the top element out of SqStack, and pass value to `e`
  * FAILURE: Empty SqStack
  */
-STATUS Sq_Pop(SqStack* s, ElemType* e) {
+STATUS SqPop(SqStack* s, ElemType* e) {
   Assert(s->base, "STACK NOT EXIST");
   if (SqStackEmpty(s)) return FAILURE;
   /* move first, assign next */
